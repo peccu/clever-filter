@@ -1,9 +1,9 @@
 'use strict';
 
 /*@ngInject*/
-export default function($routeProvider) {
+export default ['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/articles', {
       template: '<articles></articles>'
     });
-}
+}];
