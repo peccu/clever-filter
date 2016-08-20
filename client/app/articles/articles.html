@@ -12,7 +12,7 @@
         <uib-tab heading="unread">
           <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles">
             <li>
-              <h4><a href="#" uib-tooltip="{{article.info}}">{{article.name}}</a></h4>
+              <h4><a href="#">{{article.name}}</a></h4>
               <div class="content" ng-class="{ellips: !article.collapse}" ng-click="article.collapse = !article.collapse">{{article.info}}</div>
             </li>
           </ul>
