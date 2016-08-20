@@ -19,7 +19,7 @@ export class ArticlesComponent {
   $onInit() {
     this.$http.get('/api/articles')
       .then(response => {
-        this.awesomeThings = response.data;
+        this.articles = response.data;
         this.socket.syncUpdates('article', this.awesomeThings);
       });
   }
