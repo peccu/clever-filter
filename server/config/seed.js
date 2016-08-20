@@ -62,6 +62,11 @@ User.find({}).remove()
 Article.find({}).remove()
   .then(() => {
     Article.create({
+      name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+        + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Eveniet minus assumenda proident eos voluptatem. Officiis iusto minim distinctio odit nemo mollitia cum sapiente nesciunt enim eum rem vitae. Eligendi ipsum saepe aliquid temporibus irure. Eius quia mollit maxime quibusdam tenetur quod do culpa quisquam porro unde a animi.'
+        + 'Dicta dolorem labore ipsa facere anim at repudiandae. Veniam voluptatibus doloremque illo provident suscipit tempora dolore magnam totam commodi perspiciatis deserunt explicabo. Repellat quo error aut quos in non autem consequat amet quae. Inventore occaecat dolores laborum ducimus.'
+    }, {
       name: 'Development Tools',
       info: 'Integration with popular tools such as Webpack, Gulp, Babel, TypeScript, Karma, ' +
              'Mocha, ESLint, Node Inspector, Livereload, Protractor, Pug, ' +
