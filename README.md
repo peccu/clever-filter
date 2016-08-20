@@ -26,3 +26,27 @@ Run `gulp build` for building and `gulp serve` for preview.
 ## Testing
 
 Running `npm test` will run the unit tests with karma.
+
+## Generator CheatSheet
+- `yo angular-fullstack:component name`
+- `yo angular-fullstack:controller user`
+- `yo angular-fullstack:decorator serviceName`
+- `yo angular-fullstack:directive myDirective`
+- `yo angular-fullstack:endpoint [options] <name>`
+
+```
+Options:
+  -h,   --help               # Print the generator's options and usage
+        --skip-cache         # Do not remember prompt answers           Default: false
+        --route              # URL for the endpoint
+        --models             # Specify which model(s) to use            Options: mongoose, sequelize
+        --endpointDirectory  # Parent directory for enpoints
+```
+
+- `yo angular-fullstack:filter myFilter`
+- `yo angular-fullstack:heroku`
+  http://angular-fullstack.github.io/generator-angular-fullstack/Generators/heroku.html
+- `yo angular-fullstack:openshift`
+  http://angular-fullstack.github.io/generator-angular-fullstack/Generators/openshift.html
+- `yo angular-fullstack:route myroute`
+- `yo angular-fullstack:service myService`
