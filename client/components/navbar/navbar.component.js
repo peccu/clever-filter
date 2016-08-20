@@ -10,6 +10,10 @@ export class NavbarComponent {
     this.isAdmin = Auth.isAdminSync;
     this.getCurrentUser = Auth.getCurrentUserSync;
     this.isCollapsed = true;
+    this.menu = [{
+      title: 'articles',
+      link: '/articles'
+    }];
   }
 
   isActive(route) {
