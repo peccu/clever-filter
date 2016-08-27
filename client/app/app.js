@@ -30,15 +30,19 @@ import socket from '../components/socket/socket.service';
 import './app.less';
 
 import articles from './articles/articles.component';
+import article from './components/article/article.component';
 
 angular.module('cleverFilterApp', [
     // ngAnimate,
     ngCookies, ngResource, ngSanitize, 'btford.socket-io', ngRoute, uiBootstrap,
     // ngMessages,
 
-    // ngValidationMatch,
-    _Auth, account, admin, navbar, footer, main, constants, socket, util, articles
-  ])
+  // ngValidationMatch,
+  _Auth, account, admin, navbar, footer, main, constants, socket, util,
+  // Insert injection below
+  articles,
+  article,
+])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
     'ngInject';
