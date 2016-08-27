@@ -39,7 +39,6 @@ angular.module('cleverFilterApp', [
 
     // ngValidationMatch,
     _Auth, account, admin, navbar, footer, main, constants, socket, util,
-    // Insert injection below
     articles,
     article,
   ])
