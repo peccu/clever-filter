@@ -37,12 +37,12 @@ angular.module('cleverFilterApp', [
     ngCookies, ngResource, ngSanitize, 'btford.socket-io', ngRoute, uiBootstrap,
     // ngMessages,
 
-  // ngValidationMatch,
-  _Auth, account, admin, navbar, footer, main, constants, socket, util,
-  // Insert injection below
-  articles,
-  article,
-])
+    // ngValidationMatch,
+    _Auth, account, admin, navbar, footer, main, constants, socket, util,
+    // Insert injection below
+    articles,
+    article,
+  ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
     'ngInject';
