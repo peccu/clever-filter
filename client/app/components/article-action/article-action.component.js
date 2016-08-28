@@ -2,9 +2,6 @@
 const angular = require('angular');
 
 export class articleActionComponent {
-  /*@ngInject*/
-  constructor() {
-  }
 
   like(article) {
     article.isLike = true;
