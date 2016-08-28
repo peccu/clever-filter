@@ -1,0 +1,11 @@
+<div class="action-layer">
+  <div class="left" ng-click="$ctrl.text = 'dislike'">
+    <i class="material-icons md-48">sentiment_dissatisfied</i>
+  </div>
+  <div class="center" ng-click="$ctrl.article.collapse = !$ctrl.article.collapse">
+    {{$ctrl.text}}
+  </div>
+  <div class="right" ng-click="$ctrl.text = 'like'">
+    <i class="material-icons md-48">sentiment_satisfied</i>
+  </div>
+</div>

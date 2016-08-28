@@ -31,6 +31,7 @@ import './app.less';
 
 import articles from './articles/articles.component';
 import article from './components/article/article.component';
+import articleAction from './components/article-action/article-action.component';
 
 angular.module('cleverFilterApp', [
     // ngAnimate,
@@ -41,6 +42,7 @@ angular.module('cleverFilterApp', [
     _Auth, account, admin, navbar, footer, main, constants, socket, util,
     articles,
     article,
+    articleAction
   ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
