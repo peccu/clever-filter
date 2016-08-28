@@ -9,4 +9,4 @@ export default function routes($routeProvider) {
     controllerAs: 'admin',
     authenticate: 'admin'
   });
-};
+}

@@ -2,7 +2,7 @@
 
 export function OauthButtonsController($window) {
   this.loginOauth = function(provider) {
-    $window.location.href = '/auth/' + provider;
+    $window.location.href = `/auth/${provider}`;
   };
 }
 

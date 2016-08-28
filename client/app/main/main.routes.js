@@ -6,4 +6,4 @@ export default function routes($routeProvider) {
   $routeProvider.when('/', {
     template: '<main></main>'
   });
-};
+}

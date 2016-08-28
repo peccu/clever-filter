@@ -4,15 +4,15 @@ export default function routes($routeProvider) {
   'ngInject';
 
   $routeProvider.when('/login', {
-      template: require('./login/login.html'),
-      controller: 'LoginController',
-      controllerAs: 'vm'
-    })
+    template: require('./login/login.html'),
+    controller: 'LoginController',
+    controllerAs: 'vm'
+  })
     .when('/logout', {
       name: 'logout',
       referrer: '/',
       template: '',
-      controller: function($location, $route, Auth) {
+      controller($location, $route, Auth) {
         var referrer = $route.current.params.referrer || $route.current.referrer || '/';
         Auth.logout();
         $location.path(referrer);

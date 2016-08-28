@@ -23,7 +23,7 @@ export class MainController {
   }
 
   addThing() {
-    if (this.newThing) {
+    if(this.newThing) {
       this.$http.post('/api/things', {
         name: this.newThing
       });
@@ -32,7 +32,7 @@ export class MainController {
   }
 
   deleteThing(thing) {
-    this.$http.delete('/api/things/' + thing._id);
+    this.$http.delete(`/api/things/${thing._id}`);
   }
 }
 

@@ -34,16 +34,16 @@ import article from './components/article/article.component';
 import articleAction from './components/article-action/article-action.component';
 
 angular.module('cleverFilterApp', [
-    // ngAnimate,
-    ngCookies, ngResource, ngSanitize, 'btford.socket-io', ngRoute, uiBootstrap,
-    // ngMessages,
+  // ngAnimate,
+  ngCookies, ngResource, ngSanitize, 'btford.socket-io', ngRoute, uiBootstrap,
+  // ngMessages,
 
-    // ngValidationMatch,
-    _Auth, account, admin, navbar, footer, main, constants, socket, util,
-    articles,
-    article,
-    articleAction
-  ])
+  // ngValidationMatch,
+  _Auth, account, admin, navbar, footer, main, constants, socket, util,
+  articles,
+  article,
+  articleAction
+])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
     'ngInject';
@@ -51,7 +51,7 @@ angular.module('cleverFilterApp', [
 
     $rootScope.$on('$stateChangeStart', function(event, next) {
       Auth.isLoggedIn(function(loggedIn) {
-        if (next.authenticate && !loggedIn) {
+        if(next.authenticate && !loggedIn) {
           $location.path('/login');
         }
       });

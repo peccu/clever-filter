@@ -33,7 +33,7 @@ function Socket(socketFactory) {
       /**
        * Syncs item creation/updates on 'model:save'
        */
-      socket.on(modelName + ':save', function(item) {
+      socket.on(`${modelName}:save`, function(item) {
         var oldItem = _.find(array, {
           _id: item._id
         });
@@ -42,7 +42,7 @@ function Socket(socketFactory) {
 
         // replace oldItem if it exists
         // otherwise just add item to the collection
-        if (oldItem) {
+        if(oldItem) {
           array.splice(index, 1, item);
           event = 'updated';
         } else {
@@ -55,7 +55,7 @@ function Socket(socketFactory) {
       /**
        * Syncs removed items on 'model:remove'
        */
-      socket.on(modelName + ':remove', function(item) {
+      socket.on(`${modelName}:remove`, function(item) {
         var event = 'deleted';
         _.remove(array, {
           _id: item._id
@@ -70,8 +70,8 @@ function Socket(socketFactory) {
      * @param modelName
      */
     unsyncUpdates(modelName) {
-      socket.removeAllListeners(modelName + ':save');
-      socket.removeAllListeners(modelName + ':remove');
+      socket.removeAllListeners(`${modelName}:save`);
+      socket.removeAllListeners(`${modelName}:remove`);
     }
   };
 }

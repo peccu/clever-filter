@@ -25,7 +25,7 @@ var UserSchema = new Schema({
   },
   password: {
     type: String,
-    required: function() {
+    required() {
       if(authTypes.indexOf(this.provider) === -1) {
         return true;
       } else {
