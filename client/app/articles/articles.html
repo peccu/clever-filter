@@ -10,19 +10,19 @@
 
       <uib-tabset active="active">
         <uib-tab heading="unread">
-          <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles">
+          <div class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-hide="article.hide" ng-repeat="article in $ctrl.articles">
             <article article="article"></article>
-          </ul>
+          </div>
         </uib-tab>
         <uib-tab heading="good">
-          <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles | filter: '!as'">
-            <li><a href="#" uib-tooltip="{{article.info}}">{{article.name}}</a></li>
-          </ul>
+          <div class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles | filter: {isLike: true}">
+            <article article="article"></article>
+          </div>
         </uib-tab>
         <uib-tab heading="bad">
-          <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles | filter: 'as'">
-            <li><a href="#" uib-tooltip="{{article.info}}">{{article.name}}</a></li>
-          </ul>
+          <div class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="article in $ctrl.articles | filter: {isLike: false}">
+            <article article="article"></article>
+          </div>
         </uib-tab>
       </uib-tabset>
 

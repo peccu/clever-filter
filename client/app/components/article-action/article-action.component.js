@@ -5,6 +5,16 @@ export class articleActionComponent {
   /*@ngInject*/
   constructor() {
   }
+
+  like(article) {
+    article.isLike = true;
+    article.hide = true;
+  }
+
+  dislike(article) {
+    article.isLike = false;
+    article.hide = true;
+  }
 }
 
 export default angular.module('cleverFilterApp.article-action', [])
