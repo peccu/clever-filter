@@ -33,8 +33,9 @@ describe('Training API:', function() {
       request(app)
         .post('/api/trainings')
         .send({
-          name: 'New Training',
-          info: 'This is the brand new training!!!'
+          articleId: '123',
+          userId: '456',
+          isLike: true
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -48,8 +49,9 @@ describe('Training API:', function() {
     });
 
     it('should respond with the newly created training', function() {
-      newTraining.name.should.equal('New Training');
-      newTraining.info.should.equal('This is the brand new training!!!');
+      newTraining.articleId.should.equal('123');
+      newTraining.userId.should.equal('456');
+      newTraining.isLike.should.equal(true);
     });
   });
 
@@ -75,8 +77,9 @@ describe('Training API:', function() {
     });
 
     it('should respond with the requested training', function() {
-      training.name.should.equal('New Training');
-      training.info.should.equal('This is the brand new training!!!');
+      training.articleId.should.equal('123');
+      training.userId.should.equal('456');
+      training.isLike.should.equal(true);
     });
   });
 
@@ -87,8 +90,9 @@ describe('Training API:', function() {
       request(app)
         .put(`/api/trainings/${newTraining._id}`)
         .send({
-          name: 'Updated Training',
-          info: 'This is the updated training!!!'
+          articleId: '12321',
+          userId: '45654',
+          isLike: false
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -106,8 +110,9 @@ describe('Training API:', function() {
     });
 
     it('should respond with the original training', function() {
-      updatedTraining.name.should.equal('New Training');
-      updatedTraining.info.should.equal('This is the brand new training!!!');
+      updatedTraining.articleId.should.equal('123');
+      updatedTraining.userId.should.equal('456');
+      updatedTraining.isLike.should.equal(true);
     });
 
     it('should respond with the updated training on a subsequent GET', function(done) {
@@ -121,8 +126,9 @@ describe('Training API:', function() {
           }
           let training = res.body;
 
-          training.name.should.equal('Updated Training');
-          training.info.should.equal('This is the updated training!!!');
+          training.articleId.should.equal('12321');
+          training.userId.should.equal('45654');
+          training.isLike.should.equal(false);
 
           done();
         });
@@ -136,8 +142,9 @@ describe('Training API:', function() {
       request(app)
         .patch(`/api/trainings/${newTraining._id}`)
         .send([
-          { op: 'replace', path: '/name', value: 'Patched Training' },
-          { op: 'replace', path: '/info', value: 'This is the patched training!!!' }
+          { op: 'replace', path: '/articleId', value: '11111' },
+          { op: 'replace', path: '/userId', value: '44444' },
+          { op: 'replace', path: '/isLike', value: true }
         ])
         .expect(200)
         .expect('Content-Type', /json/)
@@ -155,8 +162,9 @@ describe('Training API:', function() {
     });
 
     it('should respond with the patched training', function() {
-      patchedTraining.name.should.equal('Patched Training');
-      patchedTraining.info.should.equal('This is the patched training!!!');
+      patchedTraining.articleId.should.equal('11111');
+      patchedTraining.userId.should.equal('44444');
+      patchedTraining.isLike.should.equal(true);
     });
   });
 

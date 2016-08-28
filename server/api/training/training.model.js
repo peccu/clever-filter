@@ -3,8 +3,9 @@
 import mongoose from 'mongoose';
 
 var TrainingSchema = new mongoose.Schema({
-  name: String,
-  info: String,
+  articleId: String,
+  userId: String,
+  isLike: Boolean,
   active: Boolean
 });
 
