@@ -1,5 +1,6 @@
-<article-action article="$ctrl.article"></article-action>
 <div class="article">
   <h4><a href="#">{{$ctrl.article.name}}</a></h4>
   <div class="content" ng-class="{ellips: !$ctrl.article.collapse}">{{$ctrl.article.info}}</div>
+  <div class="fadeout"></div>
 </div>
+<article-action article="$ctrl.article"></article-action>
