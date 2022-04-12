@@ -99,7 +99,7 @@
     "isparta-loader": "^2.0.0",
     "istanbul": "1.1.0-alpha.1",
     "istanbul-instrumenter-loader": "^0.2.0",
-    "jasmine-core": "^2.3.4",
+    "jasmine-core": "^4.1.0",
     "jasmine-spec-reporter": "^7.0.0",
     "karma": "~0.13.3",
     "karma-chai-plugins": "^0.7.0",
