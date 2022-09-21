@@ -128,7 +128,7 @@
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0",
     "strip-ansi": "^5.2.0",
-    "style-loader": "^0.13.0",
+    "style-loader": "^0.23.1",
     "supertest": "^4.0.2",
     "through2": "^3.0.1",
     "webpack": "^1.12.14",
