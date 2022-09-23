@@ -130,7 +130,7 @@
     "strip-ansi": "^5.2.0",
     "style-loader": "^3.3.1",
     "supertest": "^4.0.2",
-    "through2": "^3.0.1",
+    "through2": "^4.0.2",
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^5.3.3",
     "webpack-stream": "^7.0.0"
