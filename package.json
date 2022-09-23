@@ -15,7 +15,7 @@
     "angular-ui-bootstrap": "~1.1.2",
     "font-awesome": ">=4.1.0",
     "angular-socket-io": "~0.7.0",
-    "angular-validation-match": "~1.5.2",
+    "angular-validation-match": "~1.9.0",
     "core-js": "^2.2.1",
     "express": "^4.13.3",
     "morgan": "~1.9.1",
@@ -130,10 +130,10 @@
     "strip-ansi": "^5.2.0",
     "style-loader": "^0.23.1",
     "supertest": "^4.0.2",
-    "through2": "^3.0.1",
+    "through2": "^4.0.2",
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^5.3.3",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^7.0.0"
   },
   "engines": {
     "node": "^6.2.2",
