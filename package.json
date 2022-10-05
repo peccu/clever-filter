@@ -72,7 +72,7 @@
     "grunt": "^1.0.1",
     "grunt-build-control": "^0.7.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
+    "gulp-babel": "^8.0.0",
     "gulp-env": "^0.4.0",
     "gulp-eslint": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
