@@ -90,7 +90,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylint": "^4.0.2",
     "gulp-util": "^3.0.5",
-    "gulp-watch": "^4.3.5",
+    "gulp-watch": "^5.0.1",
     "html-webpack-harddisk-plugin": "~0.0.2",
     "html-webpack-plugin": "^2.16.0",
     "imports-loader": "^0.6.5",
