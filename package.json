@@ -67,7 +67,7 @@
     "css-loader": "^6.7.1",
     "del": "^7.0.0",
     "eslint": "^8.24.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.11.2",
     "grunt": "^1.0.1",
     "grunt-build-control": "^0.7.0",
